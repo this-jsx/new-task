@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  background-color: slateblue;
+  color: #fff;
+  font-size: 16px;
+  padding: 1em 3em;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.button:focus {
+  box-shadow: 3px 3px 10px #000;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: slateblue;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: grey;
+  color: #fff;
+  cursor: not-allowed;
+  border: 2px solid transparent;
+}

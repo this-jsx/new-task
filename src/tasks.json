@@ -1,0 +1,72 @@
+[
+  {
+    "title": "задача 1",
+    "text": "выполнить задачу 1",
+    "mail": "ddd@mail.ru",
+    "isDone": true,
+    "user": "user 1"
+  },
+  {
+    "title": "задача 2",
+    "text": "выполнить задачу 2",
+    "mail": "kkk@mail.ru",
+    "isDone": false,
+    "user": "user 2"
+  },
+  {
+    "title": "задача 3",
+    "text": "выполнить задачу 3",
+    "mail": "ccc@mail.ru",
+    "isDone": false,
+    "user": "user 3"
+  },
+  {
+    "title": "задача 4",
+    "text": "выполнить задачу 4",
+    "mail": "aaa@mail.ru",
+    "isDone": false,
+    "user": "user 4"
+  },
+  {
+    "title": "задача 5",
+    "text": "выполнить задачу 5",
+    "mail": "bbb@mail.ru",
+    "isDone": false,
+    "user": "user 5"
+  },
+  {
+    "title": "задача 6",
+    "text": "выполнить задачу 6",
+    "mail": "lll@mail.ru",
+    "isDone": true,
+    "user": "user 6"
+  },
+  {
+    "title": "задача 7",
+    "text": "выполнить задачу 7",
+    "mail": "ggg@mail.ru",
+    "isDone": true,
+    "user": "user 7"
+  },
+  {
+    "title": "задача 8",
+    "text": "выполнить задачу 8",
+    "mail": "ooo@mail.ru",
+    "isDone": false,
+    "user": "user 8"
+  },
+  {
+    "title": "задача 9",
+    "text": "выполнить задачу 9",
+    "mail": "fff@mail.ru",
+    "isDone": false,
+    "user": "user 9"
+  },
+  {
+    "title": "задача 10",
+    "text": "выполнить задачу 10",
+    "mail": "www@mail.ru",
+    "isDone": false,
+    "user": "user 10"
+  }
+]

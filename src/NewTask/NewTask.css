@@ -1,0 +1,14 @@
+.new-task {
+  width: 15em;
+  margin: 0 auto 2em;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px 5px;
+  box-shadow: 3px 3px 10px #333;
+}
+
+.new-task__label {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
