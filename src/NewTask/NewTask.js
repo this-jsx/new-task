@@ -23,13 +23,14 @@ export default function NewTask(props) {
     }));
   }
 
-  const handleClick = () => {
-    props.onCreateClick(task);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.onCreate(task);
     setTask(initialState);
   }
 
   return (
-    <div className="new-task">
+    <form className="new-task" onSubmit={handleSubmit}>
       <label className="new-task__label">
         Задача
         <input
@@ -73,11 +74,10 @@ export default function NewTask(props) {
 
       <Button
         className="app__create"
-        onClick={handleClick}
         disabled={task.title === '' || task.text === '' || task.mail === '' || task.user === ''}
       >
         Создать задачу
       </Button>
-    </div>
+    </form>
   )
 };

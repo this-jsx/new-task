@@ -61,6 +61,15 @@ export default function App(props) {
 
   return (
     <div className="app">
+      <Sort onChange={handleSortChange} />
+
+      <Pagination
+        onPrevClick={handlePrevClick}
+        onNextClick={handleNextClick}
+        page={page}
+        pagesTotal={pagesTotal}
+      />
+
       {currentTasks.map((task, index) => (
         <Task
           key={index}
@@ -72,16 +81,7 @@ export default function App(props) {
         />
       ))}
 
-      <Sort onChange={handleSortChange} />
-
-      <NewTask onCreateClick={handleCreateClick} />
-
-      <Pagination
-        onPrevClick={handlePrevClick}
-        onNextClick={handleNextClick}
-        page={page}
-        pagesTotal={pagesTotal}
-      />
+      <NewTask onCreate={handleCreateClick} />
     </div>
   );
 }
