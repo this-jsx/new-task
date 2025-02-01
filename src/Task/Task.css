@@ -1,19 +1,27 @@
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .task {
   width: 15em;
   margin: 2em auto;
   padding: 0.5em 1em;
   border: 1px solid #ccc;
-  border-radius: 20px 5px;
+  border-radius: 10px;
   box-shadow: 3px 3px 10px #333;
 }
 
 .task__title {
   color: rgb(44, 64, 83);
+  font-size: 18px;
 }
 
 .task__text {
-  color: darkorange;
-}
+  color: indigo;
+  font-weight: 600;
+  font-size: 15px;
+};
 
 .task__mail {
   color: green;
