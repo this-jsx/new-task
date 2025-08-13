@@ -61,7 +61,7 @@ export default function App() {
 
   function handleDelete (id) {
     setTasks(tasks => tasks.filter(task => task.id !== id))
-    console.log(tasks)
+    // console.log(tasks)
   }
 
   function handleIsDone(id) {
