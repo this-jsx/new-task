@@ -1,6 +1,5 @@
 import React from 'react'
 import './Task.css'
-import { color } from 'three/examples/jsm/nodes/Nodes.js';
 
 export default function Task({id, user, title, text, mail, isDone, onComplete, onDelete,}) {
 
