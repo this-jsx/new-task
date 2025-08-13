@@ -1,0 +1,15 @@
+.tasks-list {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tasks-two {
+  display: flex;
+  justify-content: center;
+}
+
+.tasks-two .task-container {
+  margin: 0 30px;
+}

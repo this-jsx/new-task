@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import Task from "./Task/Task";
+import TasksList from "./TasksList/TasksList";
 import Pagination from "./Pagination/Pagination";
-import Button from './Button/Button';
 import Sort from './Sort/Sort';
 import NewTask from './NewTask/NewTask';
 import initialState from './tasks.json';
@@ -9,7 +8,7 @@ import './App.css';
 
 const limit = 3;
 
-export default function App(props) {
+export default function App() {
   const [tasks, setTasks] = useState(initialState);
   const [page, setPage] = useState(1);
 
@@ -57,8 +56,18 @@ export default function App(props) {
 
   const handleCreateClick = (task) => {
     setTasks(tasks => [task, ...tasks]);
+    console.log(task)
   }
 
+  function handleDelete (id) {
+    setTasks(tasks => tasks.filter(task => task.id !== id))
+    console.log(tasks)
+  }
+
+  function handleIsDone(id) {
+    setTasks(tasks => tasks.map(task => task.id === id ? {...task, isDone: !task.isDone} : task))
+  }
+  
   return (
     <div className="app">
       <Sort onChange={handleSortChange} />
@@ -70,16 +79,7 @@ export default function App(props) {
         pagesTotal={pagesTotal}
       />
 
-      {currentTasks.map((task, index) => (
-        <Task
-          key={index}
-          user={task.user}
-          title={task.title}
-          text={task.text}
-          mail={task.mail}
-          isDone={task.isDone}
-        />
-      ))}
+      <TasksList tasks={tasks} currentTasks={currentTasks} handleDelete={handleDelete} handleIsDone={handleIsDone} />
 
       <NewTask onCreate={handleCreateClick} />
     </div>

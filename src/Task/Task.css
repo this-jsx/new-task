@@ -4,25 +4,49 @@
 }
 
 .task {
+  position: relative;
   width: 15em;
-  margin: 2em auto;
+  margin: .5em auto 2rem;
   padding: 0.5em 1em;
   border: 1px solid #ccc;
   border-radius: 10px;
+  background: lavender;
   box-shadow: 3px 3px 10px #333;
+  text-align: left;
 }
 
 .task__title {
   color: rgb(44, 64, 83);
-  font-size: 18px;
+}
+
+.task-done {
+  background: #000000c4;
+  color: #fff;
+}
+
+.task-done .task__title {
+  color: #fff;
 }
 
 .task__text {
-  color: indigo;
-  font-weight: 600;
   font-size: 15px;
+  overflow: scroll
 };
 
 .task__mail {
-  color: green;
+  color: green !important;
+  font-size: 50px !important;
+}
+
+.bottom_line {
+  padding-bottom: 20px;
+  border-bottom: 2px solid slateblue;
+}
+
+.green {
+  color: #19ac19;
+}
+
+.red {
+  color: #b61313;
 }

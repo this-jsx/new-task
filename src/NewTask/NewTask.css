@@ -1,8 +1,10 @@
 .new-task {
-  width: 15em;
+  width: 22em;
   margin: 0 auto 2em;
   padding: 0.5em 1em;
   border: 1px solid #ccc;
+  background: #3a3f45;
+  color: aliceblue;
   border-radius: 10px;
   box-shadow: 3px 3px 10px #333;
 }
@@ -11,4 +13,10 @@
   margin: 1em 0;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+}
+
+.new-task__label input, .new-task__label textarea {
+  width: 65%;
+  padding: 5px 10px;
 }

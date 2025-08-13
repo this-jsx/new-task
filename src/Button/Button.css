@@ -6,6 +6,7 @@
   padding: 1em 3em;
   border: 2px solid transparent;
   outline: none;
+  border-radius: 10px;
 }
 
 .button:focus {
@@ -13,16 +14,86 @@
 }
 
 .button:hover {
-  background-color: #fff;
-  color: slateblue;
   border: 2px solid #000;
   cursor: pointer;
 }
 
+.pagination-btn:hover {
+  background-color: #fff;
+  color: slateblue;
+}
+
 .button:disabled,
 .button:disabled:hover {
-  background-color: grey;
+  background-color: #3a3f45;
   color: #fff;
   cursor: not-allowed;
   border: 2px solid transparent;
+}
+
+#create__task:disabled,
+#create__task:disabled:hover {
+  background: #ccc;
+  color: #000;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns button:hover {
+  background-color: none;
+  /* pointer-events: none; */
+}
+
+.button__condition {
+  margin-top: 5px;
+  display: inline-block;
+  min-width: 130px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button__done {
+  background: #19ac19;
+}
+
+.button__not-done {
+  background: #b61313;
+}
+
+.button__delete {
+  position: absolute;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 5px;
+  font-size: 35px;
+  right: 10px;
+  top: 10px;
+  color: slateblue;
+  background: transparent;
+  border: 0;
+  cursor: pointer !important;
+}
+
+#btnChangeCondition {
+  border: 2px solid transparent;
+  transition: all .1s ease;
+}
+
+#btnChangeCondition:focus {
+  border: 2px solid transparent;
+  box-shadow: none;
+}
+
+
+#btnChangeCondition:hover {
+  background-image: initial;
+  outline: none;
+  box-shadow: 0;
 }

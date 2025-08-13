@@ -2,23 +2,23 @@ import React from "react";
 import Button from '../Button/Button'
 import './Pagination.css';
 
-export default function Pagination(props) {
+export default function Pagination({onPrevClick, onNextClick, page, pagesTotal}) {
   return (
     <div className="pagination">
       <Button
-        className="pagination__prev"
-        onClick={props.onPrevClick}
-        disabled={props.page === 1}
+        className="pagination__prev pagination-btn"
+        onClick={onPrevClick}
+        disabled={page === 1}
       >
         Предыдущая страница
       </Button>
 
-      <div className="pagination__page">{props.page} / {props.pagesTotal}</div>
+      <div className="pagination__page">{page} / {Math.max(pagesTotal, 1)}</div>
 
       <Button
-        className="pagination__next"
-        onClick={props.onNextClick}
-        disabled={props.page === props.pagesTotal}
+        className="pagination__next pagination-btn"
+        onClick={onNextClick}
+        disabled={page === pagesTotal}
       >
         Следующая страница
       </Button>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './NewTask.css';
+// import init from '../tasks.json'
 
 const initialState = {
   title: '',
@@ -8,6 +9,7 @@ const initialState = {
   mail: '',
   isDone: false,
   user: '',
+  id: ''
 };
 
 export default function NewTask(props) {
@@ -20,6 +22,7 @@ export default function NewTask(props) {
     setTask(task => ({
       ...task,
       [name]: value,
+      id: new Date().toLocaleTimeString()
     }));
   }
 
@@ -44,12 +47,18 @@ export default function NewTask(props) {
 
       <label className="new-task__label">
         Описание
-        <input
+        <textarea
+          rows="2"
+          name='text'
+          value={task.text}
+          onChange={handleChange}>
+        </textarea>
+        {/* <input
           name="text"
           type="text"
           value={task.text}
           onChange={handleChange}
-        />
+        /> */}
       </label>
       
       <label className="new-task__label">
@@ -74,6 +83,7 @@ export default function NewTask(props) {
 
       <Button
         className="app__create"
+        id="create__task"
         disabled={task.title === '' || task.text === '' || task.mail === '' || task.user === ''}
       >
         Создать задачу
