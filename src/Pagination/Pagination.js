@@ -18,7 +18,7 @@ export default function Pagination({onPrevClick, onNextClick, page, pagesTotal})
       <Button
         className="pagination__next pagination-btn"
         onClick={onNextClick}
-        disabled={page === pagesTotal}
+        disabled={page === pagesTotal || page === 1}
       >
         Следующая страница
       </Button>
