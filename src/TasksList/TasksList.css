@@ -13,3 +13,9 @@
 .tasks-two .task-container {
   margin: 0 30px;
 }
+
+@media (max-width: 800px) {
+  .tasks-list {
+    flex-direction: column;
+  }
+}

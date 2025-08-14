@@ -49,3 +49,19 @@
 .red {
   color: #b61313;
 }
+
+@media (max-width: 920px) {
+  .task {
+    width: 90%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .task {
+    font-size: .6rem;
+  }
+  .task__text {
+    font-size: .6rem;
+  }
+}

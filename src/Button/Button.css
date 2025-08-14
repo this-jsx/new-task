@@ -97,3 +97,32 @@
   outline: none;
   box-shadow: 0;
 }
+
+@media (max-width: 600px) {
+  .pagination-btn {
+    padding: 10px;
+  };
+}
+
+@media (max-width: 500px) {
+  .pagination-btn {
+    font-size: .8rem;
+  };
+}
+
+@media (max-width: 400px) {
+  .pagination-btn {
+    font-size: .65rem;
+  };
+}
+
+@media (max-width: 400px) {
+  #btnChangeCondition {
+    font-size: 14px;
+    min-width: 110px;
+    padding: 8px;
+  }
+  .button__delete {
+    font-size: 26px;
+  }
+}
