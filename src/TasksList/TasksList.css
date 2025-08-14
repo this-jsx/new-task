@@ -18,4 +18,7 @@
   .tasks-list {
     flex-direction: column;
   }
+  .tasks-two {
+    display: block;
+  }
 }
