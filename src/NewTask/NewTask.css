@@ -20,3 +20,12 @@
   width: 65%;
   padding: 5px 10px;
 }
+
+.app__create {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  background: slateblue;
+  margin: 10px 0;
+  width: 100%;
+  display: inline-block;
+}

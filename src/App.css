@@ -4,12 +4,3 @@
   height: 100vh;
 }
 
-.app__create {
-  margin: 0 auto;
-  margin-bottom: 1em;
-  background: slateblue;
-  margin: 10px 0;
-  min-width: 240px;
-  max-width: 240px;
-  display: inline-block;
-}

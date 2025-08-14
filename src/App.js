@@ -77,6 +77,7 @@ export default function App() {
         onNextClick={handleNextClick}
         page={page}
         pagesTotal={pagesTotal}
+        tasks={tasks}
       />
 
       <TasksList tasks={tasks} currentTasks={currentTasks} handleDelete={handleDelete} handleIsDone={handleIsDone} />
