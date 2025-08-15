@@ -45,4 +45,13 @@
     width: 50%;
     font-size: 0.9rem;
   }
+    .new-task h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .new-task h2 {
+    font-size: 14px;
+  }
 }

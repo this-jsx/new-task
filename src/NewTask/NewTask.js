@@ -32,7 +32,8 @@ export default function NewTask({onCreate, tasks}) {
   }
 
   return (
-    <form className="new-task" onSubmit={handleSubmit}  >
+    <form className="new-task" onSubmit={handleSubmit}>
+      <h2>Добавление задачи</h2>
       <label className="new-task__label">
         Задача
         <input
