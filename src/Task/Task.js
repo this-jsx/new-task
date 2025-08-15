@@ -8,7 +8,6 @@ export default function Task({id, user, title, text, mail, isDone, onComplete, o
       <div className={`task ${isDone ? 'task-done' : ''}`}>
         <p className='btns bottom_line'>
           <button id='btnChangeCondition' className={`button button__condition ${isDone ? 'button__done' : 'button__not-done'}`} onClick={() => onComplete(id)}> {isDone === true ? 'Выполнено' : 'Не выполнено'} </button>
-          {/* <button className='button__delete' style={isDone ? {color: "#fff"} : {color: "red"}} onClick={() => onDelete(id)}>&times;</button> */}
           <button className='button__delete' style={{color: isDone ? '#fff' : '#b61313'}} onClick={() => onDelete(id)}>&times;</button>
         </p>
         <h2 className="task__title">Задача: {title}</h2>

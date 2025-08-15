@@ -3,8 +3,7 @@ import './TasksList.css'
 
 function TasksList({ tasks, currentTasks, handleDelete, handleIsDone }) {
   return (
-
-    <div className={`${tasks.length === 2 ? 'tasks-two' : 'tasks-list'}`}>
+    <div className={`${tasks.length === 2 ? 'tasks-two' : 'tasks-list'}`} >
         {currentTasks.map((task) => (
           <Task
             key={task.id}

@@ -56,12 +56,10 @@ export default function App() {
 
   const handleCreateClick = (task) => {
     setTasks(tasks => [task, ...tasks]);
-    console.log(task)
   }
 
   function handleDelete (id) {
     setTasks(tasks => tasks.filter(task => task.id !== id))
-    // console.log(tasks)
   }
 
   function handleIsDone(id) {
@@ -69,20 +67,23 @@ export default function App() {
   }
   
   return (
-    <div className="app">
-      <Sort onChange={handleSortChange} />
+    <div className="app" style={{paddingTop: tasks.length > 0 ? '0' : '10rem'}}>
+      {tasks.length > 0 &&
+        <Sort onChange={handleSortChange} />}
 
-      <Pagination
-        onPrevClick={handlePrevClick}
-        onNextClick={handleNextClick}
-        page={page}
-        pagesTotal={pagesTotal}
-        tasks={tasks}
-      />
+      {tasks.length > 0 &&
+        <Pagination
+          onPrevClick={handlePrevClick}
+          onNextClick={handleNextClick}
+          page={page}
+          pagesTotal={pagesTotal}
+          tasks={tasks}
+        />}
+      
 
-      <TasksList tasks={tasks} currentTasks={currentTasks} handleDelete={handleDelete} handleIsDone={handleIsDone} />
+      {tasks.length < 1 ? null : <TasksList tasks={tasks} currentTasks={currentTasks} handleDelete={handleDelete} handleIsDone={handleIsDone} />}
 
-      <NewTask onCreate={handleCreateClick} />
+      <NewTask onCreate={handleCreateClick} tasks={tasks} />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './NewTask.css';
-// import init from '../tasks.json'
 
 const initialState = {
   title: '',
@@ -12,7 +11,7 @@ const initialState = {
   id: ''
 };
 
-export default function NewTask(props) {
+export default function NewTask({onCreate, tasks}) {
   const [task, setTask] = useState(initialState);
 
   const handleChange = (event) => {
@@ -28,12 +27,12 @@ export default function NewTask(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.onCreate(task);
+    onCreate(task);
     setTask(initialState);
   }
 
   return (
-    <form className="new-task" onSubmit={handleSubmit}>
+    <form className="new-task" onSubmit={handleSubmit}  >
       <label className="new-task__label">
         Задача
         <input
@@ -53,12 +52,6 @@ export default function NewTask(props) {
           value={task.text}
           onChange={handleChange}>
         </textarea>
-        {/* <input
-          name="text"
-          type="text"
-          value={task.text}
-          onChange={handleChange}
-        /> */}
       </label>
       
       <label className="new-task__label">

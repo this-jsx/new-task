@@ -1,9 +1,9 @@
 import React from "react";
 import "./Sort.css";
 
-export default function Sort(props) {
+export default function Sort({onChange}) {
   return (
-    <select className="sort" onChange={props.onChange} id="sort">
+    <select className="sort" onChange={onChange} id="sort">
       <option value="user_up">По имени пользователя (по возрастанию)</option>
       <option value="user_down">По имени пользователя (по убыванию)</option>
       <option value="status_up">По статусу (сначала невыполненные)</option>

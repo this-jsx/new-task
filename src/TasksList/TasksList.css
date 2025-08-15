@@ -21,4 +21,7 @@
   .tasks-two {
     display: block;
   }
+  .tasks-two .task-container {
+    margin: 0;
+}
 }
