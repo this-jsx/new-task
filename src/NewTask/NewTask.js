@@ -33,9 +33,9 @@ export default function NewTask({onCreate, tasks}) {
 
   return (
     <form className="new-task" onSubmit={handleSubmit}>
-      <h2>Добавление задачи</h2>
+      <h2>Add new task</h2>
       <label className="new-task__label">
-        Задача
+        Title
         <input
           name="title"
           type="text"
@@ -46,7 +46,7 @@ export default function NewTask({onCreate, tasks}) {
       </label>
 
       <label className="new-task__label">
-        Описание
+        Description
         <textarea
           rows="2"
           name='text'
@@ -56,7 +56,7 @@ export default function NewTask({onCreate, tasks}) {
       </label>
       
       <label className="new-task__label">
-        Почта
+        E-mail
         <input
           name="mail"
           type="email"
@@ -66,7 +66,7 @@ export default function NewTask({onCreate, tasks}) {
       </label>
 
       <label className="new-task__label">
-        Юзер
+        User
         <input
           name="user"
           type="text"
@@ -80,7 +80,7 @@ export default function NewTask({onCreate, tasks}) {
         id="create__task"
         disabled={task.title === '' || task.text === '' || task.mail === '' || task.user === ''}
       >
-        Создать задачу
+        Create task
       </Button>
     </form>
   )

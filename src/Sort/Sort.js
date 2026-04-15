@@ -4,12 +4,12 @@ import "./Sort.css";
 export default function Sort({onChange}) {
   return (
     <select className="sort" onChange={onChange} id="sort">
-      <option value="user_up">По имени пользователя (по возрастанию)</option>
-      <option value="user_down">По имени пользователя (по убыванию)</option>
-      <option value="status_up">По статусу (сначала невыполненные)</option>
-      <option value="status_down">По статусу (сначала выполненные)</option>
-      <option value="mail_up">По email (по возрастанию)</option>
-      <option value="mail_down">По email (по убыванию)</option>
+      <option value="user_up">By user's name (ascending order)</option>
+      <option value="user_down">By user's name (descending order)</option>
+      <option value="status_up">By status (undone first)</option>
+      <option value="status_down">By status (done first)</option>
+      <option value="mail_up">By e-mail (ascending order)</option>
+      <option value="mail_down">By e-mail (descending order)</option>
     </select>
   );
 }

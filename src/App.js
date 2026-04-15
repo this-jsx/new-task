@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import TasksList from "./TasksList/TasksList";
 import Pagination from "./Pagination/Pagination";
 import Sort from './Sort/Sort';
@@ -67,7 +67,7 @@ export default function App() {
   }
   
   return (
-    <div className="app" style={{paddingTop: tasks.length > 0 ? '0' : '10rem'}}>
+    <div className="app" style={{paddingTop: tasks.length > 0 ? '0' : '3rem'}}>
       {tasks.length > 0 &&
         <Sort onChange={handleSortChange} />}
 
@@ -80,8 +80,9 @@ export default function App() {
           tasks={tasks}
         />}
       
-
       {tasks.length < 1 ? null : <TasksList tasks={tasks} currentTasks={currentTasks} handleDelete={handleDelete} handleIsDone={handleIsDone} />}
+
+      {tasks.length < 1 && <h2 style={{color: '#fff', fontSize: '30px'}}>No tasks yet</h2>}
 
       <NewTask onCreate={handleCreateClick} tasks={tasks} />
     </div>

@@ -10,7 +10,7 @@ export default function Pagination({onPrevClick, onNextClick, page, pagesTotal, 
         onClick={onPrevClick}
         disabled={page === 1}
       >
-        Предыдущая страница
+        Previous page
       </Button>
 
       <div className="pagination__page">{page} / {Math.max(pagesTotal, 1)}</div>
@@ -20,7 +20,7 @@ export default function Pagination({onPrevClick, onNextClick, page, pagesTotal, 
         onClick={onNextClick}
         disabled={tasks.length <= 3 || page === pagesTotal}
       >
-        Следующая страница
+        Next page
       </Button>
     </div>
   );

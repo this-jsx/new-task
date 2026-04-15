@@ -7,14 +7,14 @@ export default function Task({id, user, title, text, mail, isDone, onComplete, o
     <div className='task-container'>
       <div className={`task ${isDone ? 'task-done' : ''}`}>
         <p className='btns bottom_line'>
-          <button id='btnChangeCondition' className={`button button__condition ${isDone ? 'button__done' : 'button__not-done'}`} onClick={() => onComplete(id)}> {isDone === true ? 'Выполнено' : 'Не выполнено'} </button>
+          <button id='btnChangeCondition' className={`button button__condition ${isDone ? 'button__done' : 'button__not-done'}`} onClick={() => onComplete(id)}> {isDone === true ? 'Done' : 'Not done'} </button>
           <button className='button__delete' style={{color: isDone ? '#fff' : '#b61313'}} onClick={() => onDelete(id)}>&times;</button>
         </p>
-        <h2 className="task__title">Задача: {title}</h2>
-        <p className="task__text"><b>Описание</b>: {text} </p>
+        <h2 className="task__title">Task: {title}</h2>
+        <p className="task__text"><b>Description</b>: {text} </p>
         <p className="task__mail"><b>E-mail</b>: {mail} </p>
-        <p className="task__user bottom_line"><b>Пользователь</b>: {user} </p>
-        <p style={{fontWeight: 400}}>Выполнено: <b><span className={`${isDone ? 'green' : 'red'}`}>{isDone ? 'да' : 'нет'}</span></b></p>
+        <p className="task__user bottom_line"><b>User</b>: {user} </p>
+        <p style={{fontWeight: 400}}>Done: <b><span className={`${isDone ? 'green' : 'red'}`}>{isDone ? 'yes' : 'no'}</span></b></p>
       </div>
     </div>
   );
